@@ -16,8 +16,8 @@ DGX cluster (A100-SXM4-40GB, AMP fp16).
 
 | Metric | Value |
 |---|---|
-| Test accuracy | 97.35% |
-| Grid (16 samples) | 15/16 correct |
+| Test accuracy | 99.10% |
+| Grid (16 samples) | 16/16 correct |
 | Parameters | 421,642 |
 | GPU | A100-SXM4-40GB (auto-selected freest) |
 | Precision | AMP fp16 |
@@ -26,9 +26,9 @@ DGX cluster (A100-SXM4-40GB, AMP fp16).
 ```
 input (B, 1, 28, 28)
   → EinConv2d 1→32, k=3, p=1   [unfold + einsum 'bhwd,do->bhwo']
-  → ReLU → EinMaxPool 2×2       [einops reduce 'max']
+  → ReLU → EinMaxPool 2×2       [einops reduce 'b c (h 2) (w 2) -> b c h w', max]
   → EinConv2d 32→64, k=3, p=1   [unfold + einsum]
-  → ReLU → EinMaxPool 2×2       [einops reduce 'max']
+  → ReLU → EinMaxPool 2×2       [einops reduce 'b c (h 2) (w 2) -> b c h w', max]
   → einops rearrange 'b c h w -> b (c h w)'   [flatten]
   → EinLinear 3136→128          [einsum '...i,io->...o']
   → ReLU → EinLinear 128→10     [einsum]
