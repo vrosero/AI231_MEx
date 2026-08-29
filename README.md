@@ -1,12 +1,18 @@
 # AI231 — Machine Learning Operations
 
-Course submission repository.
+Course submission repository. Each exercise lives in its own folder.
+
+## Layout
+
+| Folder | Exercise |
+|---|---|
+| `MEx1/` | 3-Layer CNN for MNIST (einops/einsum) |
 
 ## MEx 1 — 3-Layer CNN for MNIST (einops/einsum)
 
-`mex1.ipynb` — a 3-layer CNN where every layer/operation is implemented with
-`einops`/`einsum` (no `nn.Conv2d` / `nn.Linear`). Trained 5 epochs on the DGX
-cluster (A100-SXM4-40GB, AMP fp16).
+`MEx1/mex1.ipynb` — a 3-layer CNN where every layer/operation is implemented
+with `einops`/`einsum` (no `nn.Conv2d` / `nn.Linear`). Trained 5 epochs on the
+DGX cluster (A100-SXM4-40GB, AMP fp16).
 
 | Metric | Value |
 |---|---|
@@ -28,7 +34,7 @@ input (B, 1, 28, 28)
   → ReLU → EinLinear 128→10     [einsum]
 ```
 
-**Artifacts**
+**Artifacts** (all in `MEx1/`)
 - `mex1.ipynb` — executed notebook (figures embedded inline)
 - `grid_4x4.png` — 16 test samples, ground truth vs prediction
 - `curves.png` — training loss + train/test accuracy
