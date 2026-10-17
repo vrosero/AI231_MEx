@@ -36,21 +36,31 @@ def list_inputs():
 
 
 def select_device(prefer=()):
-    """Pick the input device index. Prefer a name match, else default input."""
+    """Pick the input device index. Prefer a name match, else default input.
+
+    Substrings are tried in the order given (outer loop) BEFORE falling back
+    to enumeration order (inner loop), so a specific name like "seeed" always
+    beats a generic one like "usb" even when the USB device happens to
+    enumerate first. (Bug fix 2026-10-17: after a reboot the AB13X USB
+    headset adapter can grab a lower card index than the ReSpeaker HAT; the
+    old devices-first loop then matched the generic "usb" fallback and VCM
+    captured a dead headset jack instead of the HAT.)
+    """
     import sounddevice as sd
     devs = sd.query_devices()
     prefer = [p.lower() for p in prefer]
-    for i, d in enumerate(devs):
-        if d.get("max_input_channels", 0) > 0:
-            nm = d["name"].lower()
-            if any(p in nm for p in prefer):
-                log.info("selected mic #%d: %s", i, d["name"])
-                return i
+    for p in prefer:                      # most specific name first
+        for i, d in enumerate(devs):
+            if d.get("max_input_channels", 0) > 0:
+                if p in d["name"].lower():
+                    log.info("selected mic #%d: %s", i, d["name"])
+                    return i
     di = sd.default.device[0]
     if isinstance(di, (list, tuple)):
         di = di[0]
     if di is not None and di >= 0:
-        log.info("no named match; using default input #%d: %s", di, devs[di]["name"])
+        log.warning("no preferred mic found; using default input #%d: %s",
+                    di, devs[di]["name"])
         return int(di)
     log.warning("no input device found")
     return None
@@ -58,21 +68,27 @@ def select_device(prefer=()):
 
 def select_output(prefer=()):
     """Pick the OUTPUT device index for the confirmation beep. Prefer a name
-    match (e.g. the XSP61 Bluetooth speaker), else the system default output."""
+    match (e.g. the XSP61 Bluetooth speaker), else the system default output.
+
+    Same ordering rule as select_device: preferred substrings outer,
+    devices inner, so a specific name beats a generic one regardless of
+    enumeration order.
+    """
     import sounddevice as sd
     devs = sd.query_devices()
     prefer = [p.lower() for p in prefer]
-    for i, d in enumerate(devs):
-        if d.get("max_output_channels", 0) > 0:
-            nm = d["name"].lower()
-            if any(p in nm for p in prefer):
-                log.info("selected speaker #%d: %s", i, d["name"])
-                return i
+    for p in prefer:                  # most specific name first
+        for i, d in enumerate(devs):
+            if d.get("max_output_channels", 0) > 0:
+                if p in d["name"].lower():
+                    log.info("selected speaker #%d: %s", i, d["name"])
+                    return i
     do = sd.default.device[1]
     if isinstance(do, (list, tuple)):
         do = do[0]
     if do is not None and do >= 0:
-        log.info("no named speaker match; using default output #%d: %s", do, devs[do]["name"])
+        log.warning("no preferred speaker found; using default output #%d: %s",
+                    do, devs[do]["name"])
         return int(do)
     log.warning("no output device found")
     return None
