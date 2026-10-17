@@ -1,0 +1,363 @@
+{
+ "type": "session",
+ "started": "2026-10-16 09:32:05",
+ "meta": {
+  "dry_run": false,
+  "config": {
+   "mic_prefer": [
+    "respeaker",
+    "seeed",
+    "tlv320aic3x",
+    "pulse",
+    "usb"
+   ],
+   "speaker_prefer": [
+    "pulse"
+   ],
+   "music_audio_device": "pipewire",
+   "wake_engine": "cnn",
+   "wake_rms_threshold": 0.012,
+   "wake_min_active_frames": 3,
+   "wake_cooldown_ms": 2500,
+   "wake_threshold": 0.75,
+   "wake_persist_frames": 2,
+   "leds_enabled": true,
+   "led_num": 3,
+   "led_blink_hz": 2.5,
+   "music_start_volume": 60,
+   "weather_city": "Quezon City",
+   "weather_lat": 14.6357,
+   "weather_lon": 121.0325,
+   "weather_units": "metric",
+   "min_conf": 0.25,
+   "beep": true,
+   "tts_enabled": true,
+   "tts_volume": 1.0,
+   "cmd_max_seconds": 1.6,
+   "cmd_end_silence": 0.4,
+   "cmd_no_speech_timeout": 1.0
+  }
+ },
+ "stages": {
+  "trim": {
+   "n": 13,
+   "mean_ms": 0.6073473061685666,
+   "p50_ms": 0.3924580232705921,
+   "p95_ms": 0.9977766079828141,
+   "max_ms": 1.1178750137332827
+  },
+  "classify": {
+   "n": 13,
+   "mean_ms": 19.34712653299077,
+   "p50_ms": 13.715224980842322,
+   "p95_ms": 27.693195187021043,
+   "max_ms": 29.105689987773076
+  },
+  "action": {
+   "n": 12,
+   "mean_ms": 31.000773111979168,
+   "p50_ms": 0.05352497100830078,
+   "p95_ms": 166.68330430984471,
+   "max_ms": 368.22009086608887
+  }
+ },
+ "events": {
+  "wake": 13
+ },
+ "commands": [
+  {
+   "fine": "OUT_OF_SCOPE",
+   "conf": 0.9881,
+   "recognized": true,
+   "ok": false,
+   "action": "none",
+   "action_ms": 0.1,
+   "intent": "OUT_OF_SCOPE",
+   "intent_conf": 0.9849
+  },
+  {
+   "fine": "OUT_OF_SCOPE",
+   "conf": 0.9951,
+   "recognized": true,
+   "ok": false,
+   "action": "none",
+   "action_ms": 0.1,
+   "intent": "OUT_OF_SCOPE",
+   "intent_conf": 0.994
+  },
+  {
+   "fine": "OUT_OF_SCOPE",
+   "conf": 0.9782,
+   "recognized": true,
+   "ok": false,
+   "action": "none",
+   "action_ms": 0.1,
+   "intent": "OUT_OF_SCOPE",
+   "intent_conf": 0.9736
+  },
+  {
+   "fine": "NEXT",
+   "conf": 0.4594,
+   "recognized": true,
+   "ok": true,
+   "action": "next",
+   "action_ms": 368.2,
+   "intent": "NEXT",
+   "intent_conf": 0.4498
+  },
+  {
+   "fine": "OUT_OF_SCOPE",
+   "conf": 0.7046,
+   "recognized": true,
+   "ok": false,
+   "action": "none",
+   "action_ms": 0.0,
+   "intent": "OUT_OF_SCOPE",
+   "intent_conf": 0.7029
+  },
+  {
+   "fine": "OUT_OF_SCOPE",
+   "conf": 0.6052,
+   "recognized": true,
+   "ok": false,
+   "action": "none",
+   "action_ms": 0.0,
+   "intent": "OUT_OF_SCOPE",
+   "intent_conf": 0.6126
+  },
+  {
+   "fine": "VOLUME_DOWN",
+   "conf": 0.9436,
+   "recognized": true,
+   "ok": true,
+   "action": "volume_down",
+   "action_ms": 1.6,
+   "intent": "VOLUME_DOWN",
+   "intent_conf": 0.9202
+  },
+  {
+   "fine": "STOP",
+   "conf": 0.8642,
+   "recognized": true,
+   "ok": true,
+   "action": "stop",
+   "action_ms": 1.8,
+   "intent": "STOP",
+   "intent_conf": 0.8441
+  },
+  {
+   "fine": "OUT_OF_SCOPE",
+   "conf": 0.9866,
+   "recognized": true,
+   "ok": false,
+   "action": "none",
+   "action_ms": 0.1,
+   "intent": "OUT_OF_SCOPE",
+   "intent_conf": 0.9832
+  },
+  {
+   "fine": "OUT_OF_SCOPE",
+   "conf": 0.9829,
+   "recognized": true,
+   "ok": false,
+   "action": "none",
+   "action_ms": 0.0,
+   "intent": "OUT_OF_SCOPE",
+   "intent_conf": 0.9791
+  },
+  {
+   "fine": "OUT_OF_SCOPE",
+   "conf": 0.9863,
+   "recognized": true,
+   "ok": false,
+   "action": "none",
+   "action_ms": 0.0,
+   "intent": "OUT_OF_SCOPE",
+   "intent_conf": 0.9835
+  },
+  {
+   "fine": "OUT_OF_SCOPE",
+   "conf": 0.988,
+   "recognized": true,
+   "ok": false,
+   "action": "none",
+   "action_ms": 0.0,
+   "intent": "OUT_OF_SCOPE",
+   "intent_conf": 0.9829
+  },
+  {
+   "fine": "VOLUME_DOWN",
+   "conf": 0.1879,
+   "recognized": false,
+   "ok": false,
+   "detail": "low conf",
+   "intent": "VOLUME_DOWN",
+   "intent_conf": 0.1985
+  }
+ ],
+ "outcomes": {
+  "True|False": 9,
+  "True|True": 3,
+  "False|False": 1
+ },
+ "event_fields": {
+  "wake": [
+   {
+    "engine": "CnnWakeGate",
+    "score": 0.9589
+   },
+   {
+    "engine": "CnnWakeGate",
+    "score": 0.9091
+   },
+   {
+    "engine": "CnnWakeGate",
+    "score": 0.9859
+   },
+   {
+    "engine": "CnnWakeGate",
+    "score": 0.8834
+   },
+   {
+    "engine": "CnnWakeGate",
+    "score": 0.9376
+   },
+   {
+    "engine": "CnnWakeGate",
+    "score": 0.8247
+   },
+   {
+    "engine": "CnnWakeGate",
+    "score": 0.9975
+   },
+   {
+    "engine": "CnnWakeGate",
+    "score": 0.9498
+   },
+   {
+    "engine": "CnnWakeGate",
+    "score": 0.9305
+   },
+   {
+    "engine": "CnnWakeGate",
+    "score": 0.9025
+   },
+   {
+    "engine": "CnnWakeGate",
+    "score": 0.964
+   },
+   {
+    "engine": "CnnWakeGate",
+    "score": 0.9405
+   },
+   {
+    "engine": "CnnWakeGate",
+    "score": 0.8618
+   }
+  ]
+ },
+ "stage_fields": {
+  "trim": [
+   {
+    "speech_s": 1.62
+   },
+   {
+    "speech_s": 1.62
+   },
+   {
+    "speech_s": 1.59
+   },
+   {
+    "speech_s": 1.62
+   },
+   {
+    "speech_s": 1.62
+   },
+   {
+    "speech_s": 1.62
+   },
+   {
+    "speech_s": 1.62
+   },
+   {
+    "speech_s": 1.62
+   },
+   {
+    "speech_s": 1.62
+   },
+   {
+    "speech_s": 1.62
+   },
+   {
+    "speech_s": 1.62
+   },
+   {
+    "speech_s": 1.62
+   },
+   {
+    "speech_s": 1.62
+   }
+  ],
+  "action": [
+   {
+    "fine": "OUT_OF_SCOPE",
+    "action": "none"
+   },
+   {
+    "fine": "OUT_OF_SCOPE",
+    "action": "none"
+   },
+   {
+    "fine": "OUT_OF_SCOPE",
+    "action": "none"
+   },
+   {
+    "fine": "NEXT",
+    "action": "next"
+   },
+   {
+    "fine": "OUT_OF_SCOPE",
+    "action": "none"
+   },
+   {
+    "fine": "OUT_OF_SCOPE",
+    "action": "none"
+   },
+   {
+    "fine": "VOLUME_DOWN",
+    "action": "volume_down"
+   },
+   {
+    "fine": "STOP",
+    "action": "stop"
+   },
+   {
+    "fine": "OUT_OF_SCOPE",
+    "action": "none"
+   },
+   {
+    "fine": "OUT_OF_SCOPE",
+    "action": "none"
+   },
+   {
+    "fine": "OUT_OF_SCOPE",
+    "action": "none"
+   },
+   {
+    "fine": "OUT_OF_SCOPE",
+    "action": "none"
+   }
+  ]
+ },
+ "ended": "2026-10-16 09:33:51",
+ "uptime_s": 105.7,
+ "summary": {
+  "uptime_s": 105.7,
+  "wakes": 13,
+  "commands": 13,
+  "recognized": 12,
+  "ok": 3,
+  "ok_rate": 0.231,
+  "recognised_rate": 0.923
+ }
+}

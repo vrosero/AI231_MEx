@@ -1,0 +1,56 @@
+{
+ "type": "session",
+ "started": "2026-10-15 17:30:22",
+ "meta": {
+  "dry_run": false,
+  "config": {
+   "mic_prefer": [
+    "respeaker",
+    "seeed",
+    "tlv320aic3x",
+    "pulse",
+    "usb"
+   ],
+   "speaker_prefer": [
+    "pulse"
+   ],
+   "music_audio_device": "pipewire",
+   "wake_engine": "cnn",
+   "wake_rms_threshold": 0.012,
+   "wake_min_active_frames": 3,
+   "wake_cooldown_ms": 2500,
+   "wake_threshold": 0.75,
+   "wake_persist_frames": 2,
+   "leds_enabled": true,
+   "led_num": 3,
+   "led_blink_hz": 2.5,
+   "music_start_volume": 60,
+   "weather_city": "Quezon City",
+   "weather_lat": 14.6357,
+   "weather_lon": 121.0325,
+   "weather_units": "metric",
+   "min_conf": 0.25,
+   "beep": true,
+   "tts_enabled": true,
+   "tts_volume": 1.0,
+   "cmd_max_seconds": 1.6,
+   "cmd_end_silence": 0.4,
+   "cmd_no_speech_timeout": 1.0
+  }
+ },
+ "stages": {},
+ "events": {},
+ "commands": [],
+ "outcomes": {},
+ "ended": "2026-10-15 17:33:26",
+ "uptime_s": 183.9,
+ "summary": {
+  "uptime_s": 183.9,
+  "wakes": 0,
+  "commands": 0,
+  "recognized": 0,
+  "ok": 0,
+  "ok_rate": null,
+  "recognised_rate": null
+ }
+}

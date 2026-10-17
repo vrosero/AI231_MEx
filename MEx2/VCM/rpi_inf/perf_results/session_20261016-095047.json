@@ -1,0 +1,177 @@
+{
+ "type": "session",
+ "started": "2026-10-16 09:50:11",
+ "meta": {
+  "dry_run": false,
+  "config": {
+   "mic_prefer": [
+    "respeaker",
+    "seeed",
+    "tlv320aic3x",
+    "pulse",
+    "usb"
+   ],
+   "speaker_prefer": [
+    "pulse"
+   ],
+   "music_audio_device": "pipewire",
+   "wake_engine": "cnn",
+   "wake_rms_threshold": 0.012,
+   "wake_min_active_frames": 3,
+   "wake_cooldown_ms": 2500,
+   "wake_threshold": 0.75,
+   "wake_persist_frames": 2,
+   "leds_enabled": true,
+   "led_num": 3,
+   "led_blink_hz": 2.5,
+   "music_start_volume": 60,
+   "weather_city": "Quezon City",
+   "weather_lat": 14.6357,
+   "weather_lon": 121.0325,
+   "weather_units": "metric",
+   "min_conf": 0.25,
+   "beep": true,
+   "tts_enabled": true,
+   "tts_volume": 1.0,
+   "cmd_max_seconds": 1.6,
+   "cmd_end_silence": 0.4,
+   "cmd_no_speech_timeout": 1.0
+  }
+ },
+ "stages": {
+  "trim": {
+   "n": 4,
+   "mean_ms": 0.5229524977039546,
+   "p50_ms": 0.36770899896509945,
+   "p95_ms": 0.9101732925046233,
+   "max_ms": 1.0040999914053828
+  },
+  "classify": {
+   "n": 4,
+   "mean_ms": 18.409883508866187,
+   "p50_ms": 13.300426508067176,
+   "p95_ms": 30.91118045995244,
+   "max_ms": 33.99093801272102
+  },
+  "action": {
+   "n": 4,
+   "mean_ms": 0.3650784492492676,
+   "p50_ms": 0.28884410858154297,
+   "p95_ms": 0.592517852783203,
+   "max_ms": 0.6458759307861328
+  }
+ },
+ "events": {
+  "wake": 4
+ },
+ "commands": [
+  {
+   "fine": "ALARM_8_00AM",
+   "conf": 0.382,
+   "recognized": true,
+   "ok": true,
+   "action": "alarm",
+   "action_ms": 0.6,
+   "intent": "ALARM",
+   "intent_conf": 0.9812
+  },
+  {
+   "fine": "ALARM_6_00AM",
+   "conf": 0.9906,
+   "recognized": true,
+   "ok": true,
+   "action": "alarm",
+   "action_ms": 0.3,
+   "intent": "ALARM",
+   "intent_conf": 0.9837
+  },
+  {
+   "fine": "VOLUME_DOWN",
+   "conf": 0.839,
+   "recognized": true,
+   "ok": true,
+   "action": "volume_down",
+   "action_ms": 0.3,
+   "intent": "VOLUME_DOWN",
+   "intent_conf": 0.8161
+  },
+  {
+   "fine": "MESSAGE",
+   "conf": 0.3419,
+   "recognized": true,
+   "ok": true,
+   "action": "message",
+   "action_ms": 0.2,
+   "intent": "MESSAGE",
+   "intent_conf": 0.2719
+  }
+ ],
+ "outcomes": {
+  "True|True": 4
+ },
+ "event_fields": {
+  "wake": [
+   {
+    "engine": "CnnWakeGate",
+    "score": 0.9445
+   },
+   {
+    "engine": "CnnWakeGate",
+    "score": 0.9252
+   },
+   {
+    "engine": "CnnWakeGate",
+    "score": 1.0
+   },
+   {
+    "engine": "CnnWakeGate",
+    "score": 0.969
+   }
+  ]
+ },
+ "stage_fields": {
+  "trim": [
+   {
+    "speech_s": 1.62
+   },
+   {
+    "speech_s": 1.62
+   },
+   {
+    "speech_s": 1.62
+   },
+   {
+    "speech_s": 1.47
+   }
+  ],
+  "action": [
+   {
+    "fine": "ALARM_8_00AM",
+    "action": "alarm"
+   },
+   {
+    "fine": "ALARM_6_00AM",
+    "action": "alarm"
+   },
+   {
+    "fine": "VOLUME_DOWN",
+    "action": "volume_down"
+   },
+   {
+    "fine": "MESSAGE",
+    "action": "message"
+   }
+  ]
+ },
+ "ended": "2026-10-16 09:50:47",
+ "uptime_s": 35.7,
+ "summary": {
+  "uptime_s": 35.7,
+  "wakes": 4,
+  "commands": 4,
+  "recognized": 4,
+  "ok": 4,
+  "ok_rate": 1.0,
+  "recognised_rate": 1.0
+ }
+}

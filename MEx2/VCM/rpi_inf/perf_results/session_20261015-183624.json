@@ -1,0 +1,114 @@
+{
+ "type": "session",
+ "started": "2026-10-15 18:36:02",
+ "meta": {
+  "dry_run": false,
+  "config": {
+   "mic_prefer": [
+    "respeaker",
+    "seeed",
+    "tlv320aic3x",
+    "pulse",
+    "usb"
+   ],
+   "speaker_prefer": [
+    "pulse"
+   ],
+   "music_audio_device": "pipewire",
+   "wake_engine": "cnn",
+   "wake_rms_threshold": 0.012,
+   "wake_min_active_frames": 3,
+   "wake_cooldown_ms": 2500,
+   "wake_threshold": 0.75,
+   "wake_persist_frames": 2,
+   "leds_enabled": true,
+   "led_num": 3,
+   "led_blink_hz": 2.5,
+   "music_start_volume": 60,
+   "weather_city": "Quezon City",
+   "weather_lat": 14.6357,
+   "weather_lon": 121.0325,
+   "weather_units": "metric",
+   "min_conf": 0.25,
+   "beep": true,
+   "tts_enabled": true,
+   "tts_volume": 1.0,
+   "cmd_max_seconds": 1.6,
+   "cmd_end_silence": 0.4,
+   "cmd_no_speech_timeout": 1.0
+  }
+ },
+ "stages": {
+  "trim": {
+   "n": 1,
+   "mean_ms": 0.5073450010968372,
+   "p50_ms": 0.5073450010968372,
+   "p95_ms": 0.5073450010968372,
+   "max_ms": 0.5073450010968372
+  },
+  "classify": {
+   "n": 1,
+   "mean_ms": 15.619665005942807,
+   "p50_ms": 15.619665005942807,
+   "p95_ms": 15.619665005942807,
+   "max_ms": 15.619665005942807
+  },
+  "action": {
+   "n": 1,
+   "mean_ms": 0.057697296142578125,
+   "p50_ms": 0.057697296142578125,
+   "p95_ms": 0.057697296142578125,
+   "max_ms": 0.057697296142578125
+  }
+ },
+ "events": {
+  "wake": 1
+ },
+ "commands": [
+  {
+   "fine": "OUT_OF_SCOPE",
+   "conf": 0.9927,
+   "recognized": true,
+   "ok": false,
+   "action": "none",
+   "action_ms": 0.1,
+   "intent": "OUT_OF_SCOPE",
+   "intent_conf": 0.991
+  }
+ ],
+ "outcomes": {
+  "True|False": 1
+ },
+ "event_fields": {
+  "wake": [
+   {
+    "engine": "CnnWakeGate",
+    "score": 0.7788
+   }
+  ]
+ },
+ "stage_fields": {
+  "trim": [
+   {
+    "speech_s": 1.35
+   }
+  ],
+  "action": [
+   {
+    "fine": "OUT_OF_SCOPE",
+    "action": "none"
+   }
+  ]
+ },
+ "ended": "2026-10-15 18:36:24",
+ "uptime_s": 22.1,
+ "summary": {
+  "uptime_s": 22.1,
+  "wakes": 1,
+  "commands": 1,
+  "recognized": 1,
+  "ok": 0,
+  "ok_rate": 0.0,
+  "recognised_rate": 1.0
+ }
+}

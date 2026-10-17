@@ -1,0 +1,246 @@
+{
+  "voice": "en_GB-alan-medium",
+  "count": 40,
+  "files": {
+    "alarm-set-for-6-am-490634.mp3": {
+      "sentence": "Alarm set for 6 AM.",
+      "labels": [
+        "ALARM_6_00AM"
+      ]
+    },
+    "alarm-set-for-8-am-860c4e.mp3": {
+      "sentence": "Alarm set for 8 AM.",
+      "labels": [
+        "ALARM_8_00AM"
+      ]
+    },
+    "alarm-set-for-9-pm-013e88.mp3": {
+      "sentence": "Alarm set for 9 PM.",
+      "labels": [
+        "ALARM_9_00PM"
+      ]
+    },
+    "calling-35ef50.mp3": {
+      "sentence": "Calling.",
+      "labels": [
+        "CALL"
+      ]
+    },
+    "message-sent-d974ba.mp3": {
+      "sentence": "Message sent.",
+      "labels": [
+        "MESSAGE"
+      ]
+    },
+    "reminder-created-drink-water-ee3fd5.mp3": {
+      "sentence": "Reminder created: drink water.",
+      "labels": [
+        "CREATE_REMINDER_DRINK_WATER"
+      ]
+    },
+    "reminder-created-exercise-17d240.mp3": {
+      "sentence": "Reminder created: exercise.",
+      "labels": [
+        "CREATE_REMINDER_EXERCISE"
+      ]
+    },
+    "reminder-created-study-cfb13d.mp3": {
+      "sentence": "Reminder created: study.",
+      "labels": [
+        "CREATE_REMINDER_STUDY"
+      ]
+    },
+    "setting-the-temperature-to-18-degrees-a0d5b3.mp3": {
+      "sentence": "Setting the temperature to 18 degrees.",
+      "labels": [
+        "TEMPERATURE_18"
+      ]
+    },
+    "setting-the-temperature-to-22-degrees-81e21a.mp3": {
+      "sentence": "Setting the temperature to 22 degrees.",
+      "labels": [
+        "TEMPERATURE_22"
+      ]
+    },
+    "setting-the-temperature-to-26-degrees-1fd98f.mp3": {
+      "sentence": "Setting the temperature to 26 degrees.",
+      "labels": [
+        "TEMPERATURE_26"
+      ]
+    },
+    "yes-8ad971.mp3": {
+      "sentence": "Yes?",
+      "labels": [
+        "WAKE_CUE"
+      ]
+    },
+    "you-have-1-reminder-drink-water-19b565.mp3": {
+      "sentence": "You have 1 reminder: drink water.",
+      "labels": [
+        "LIST_REMINDERS(n=1,first=drink water)"
+      ]
+    },
+    "you-have-1-reminder-exercise-f089db.mp3": {
+      "sentence": "You have 1 reminder: exercise.",
+      "labels": [
+        "LIST_REMINDERS(n=1,first=exercise)"
+      ]
+    },
+    "you-have-1-reminder-study-d055db.mp3": {
+      "sentence": "You have 1 reminder: study.",
+      "labels": [
+        "LIST_REMINDERS(n=1,first=study)"
+      ]
+    },
+    "you-have-2-reminders-the-first-is-drink-water-2d30b4.mp3": {
+      "sentence": "You have 2 reminders. The first is drink water.",
+      "labels": [
+        "LIST_REMINDERS(n=2,first=drink water)"
+      ]
+    },
+    "you-have-2-reminders-the-first-is-exercise-c08ac1.mp3": {
+      "sentence": "You have 2 reminders. The first is exercise.",
+      "labels": [
+        "LIST_REMINDERS(n=2,first=exercise)"
+      ]
+    },
+    "you-have-2-reminders-the-first-is-study-fcad4e.mp3": {
+      "sentence": "You have 2 reminders. The first is study.",
+      "labels": [
+        "LIST_REMINDERS(n=2,first=study)"
+      ]
+    },
+    "you-have-3-reminders-the-first-is-drink-water-482202.mp3": {
+      "sentence": "You have 3 reminders. The first is drink water.",
+      "labels": [
+        "LIST_REMINDERS(n=3,first=drink water)"
+      ]
+    },
+    "you-have-3-reminders-the-first-is-exercise-bf7341.mp3": {
+      "sentence": "You have 3 reminders. The first is exercise.",
+      "labels": [
+        "LIST_REMINDERS(n=3,first=exercise)"
+      ]
+    },
+    "you-have-3-reminders-the-first-is-study-ea0c5a.mp3": {
+      "sentence": "You have 3 reminders. The first is study.",
+      "labels": [
+        "LIST_REMINDERS(n=3,first=study)"
+      ]
+    },
+    "you-have-4-reminders-the-first-is-drink-water-0b43e3.mp3": {
+      "sentence": "You have 4 reminders. The first is drink water.",
+      "labels": [
+        "LIST_REMINDERS(n=4,first=drink water)"
+      ]
+    },
+    "you-have-4-reminders-the-first-is-exercise-f768e0.mp3": {
+      "sentence": "You have 4 reminders. The first is exercise.",
+      "labels": [
+        "LIST_REMINDERS(n=4,first=exercise)"
+      ]
+    },
+    "you-have-4-reminders-the-first-is-study-7de46a.mp3": {
+      "sentence": "You have 4 reminders. The first is study.",
+      "labels": [
+        "LIST_REMINDERS(n=4,first=study)"
+      ]
+    },
+    "you-have-5-reminders-the-first-is-drink-water-dd06b2.mp3": {
+      "sentence": "You have 5 reminders. The first is drink water.",
+      "labels": [
+        "LIST_REMINDERS(n=5,first=drink water)"
+      ]
+    },
+    "you-have-5-reminders-the-first-is-exercise-64ad7b.mp3": {
+      "sentence": "You have 5 reminders. The first is exercise.",
+      "labels": [
+        "LIST_REMINDERS(n=5,first=exercise)"
+      ]
+    },
+    "you-have-5-reminders-the-first-is-study-3d9ed5.mp3": {
+      "sentence": "You have 5 reminders. The first is study.",
+      "labels": [
+        "LIST_REMINDERS(n=5,first=study)"
+      ]
+    },
+    "you-have-6-reminders-the-first-is-drink-water-e096e9.mp3": {
+      "sentence": "You have 6 reminders. The first is drink water.",
+      "labels": [
+        "LIST_REMINDERS(n=6,first=drink water)"
+      ]
+    },
+    "you-have-6-reminders-the-first-is-exercise-a121ce.mp3": {
+      "sentence": "You have 6 reminders. The first is exercise.",
+      "labels": [
+        "LIST_REMINDERS(n=6,first=exercise)"
+      ]
+    },
+    "you-have-6-reminders-the-first-is-study-f76009.mp3": {
+      "sentence": "You have 6 reminders. The first is study.",
+      "labels": [
+        "LIST_REMINDERS(n=6,first=study)"
+      ]
+    },
+    "you-have-7-reminders-the-first-is-drink-water-41109c.mp3": {
+      "sentence": "You have 7 reminders. The first is drink water.",
+      "labels": [
+        "LIST_REMINDERS(n=7,first=drink water)"
+      ]
+    },
+    "you-have-7-reminders-the-first-is-exercise-f2e0ba.mp3": {
+      "sentence": "You have 7 reminders. The first is exercise.",
+      "labels": [
+        "LIST_REMINDERS(n=7,first=exercise)"
+      ]
+    },
+    "you-have-7-reminders-the-first-is-study-a0fa7e.mp3": {
+      "sentence": "You have 7 reminders. The first is study.",
+      "labels": [
+        "LIST_REMINDERS(n=7,first=study)"
+      ]
+    },
+    "you-have-8-reminders-the-first-is-drink-water-765bfc.mp3": {
+      "sentence": "You have 8 reminders. The first is drink water.",
+      "labels": [
+        "LIST_REMINDERS(n=8,first=drink water)"
+      ]
+    },
+    "you-have-8-reminders-the-first-is-exercise-50fd90.mp3": {
+      "sentence": "You have 8 reminders. The first is exercise.",
+      "labels": [
+        "LIST_REMINDERS(n=8,first=exercise)"
+      ]
+    },
+    "you-have-8-reminders-the-first-is-study-996ae3.mp3": {
+      "sentence": "You have 8 reminders. The first is study.",
+      "labels": [
+        "LIST_REMINDERS(n=8,first=study)"
+      ]
+    },
+    "you-have-9-reminders-the-first-is-drink-water-46755e.mp3": {
+      "sentence": "You have 9 reminders. The first is drink water.",
+      "labels": [
+        "LIST_REMINDERS(n=9,first=drink water)"
+      ]
+    },
+    "you-have-9-reminders-the-first-is-exercise-eef5b6.mp3": {
+      "sentence": "You have 9 reminders. The first is exercise.",
+      "labels": [
+        "LIST_REMINDERS(n=9,first=exercise)"
+      ]
+    },
+    "you-have-9-reminders-the-first-is-study-a6292b.mp3": {
+      "sentence": "You have 9 reminders. The first is study.",
+      "labels": [
+        "LIST_REMINDERS(n=9,first=study)"
+      ]
+    },
+    "you-have-no-reminders-1b7218.mp3": {
+      "sentence": "You have no reminders.",
+      "labels": [
+        "LIST_REMINDERS(n=0)"
+      ]
+    }
+  }
+}

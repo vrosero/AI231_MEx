@@ -1,0 +1,16 @@
+# .venv_inf — the rpi_inf measurement environment (Mac side).
+# Runs: perf.py bench/wake/report, check_contract.py, gen_responses.py.
+# On the Pi, perf.py needs none of this file — it is torch-free by design and
+# runs inside rpi/.venv (numpy + onnxruntime come from rpi/requirements.txt).
+# Create with: bash setup_env.sh
+torch==2.13.0            # check_contract.py loads vcm_model.py (torch)
+numpy==2.5.2
+onnx==1.23.2
+onnxruntime==1.31.0
+soundfile==0.14.0        # perf.py wake reads dataset/Jarvis wavs
+huggingface_hub==1.33.0  # accuracy parts read HF parquet labels
+pyarrow==25.0.1
+
+# Optional — only for gen_responses.py (regenerating the spoken-response MP3s;
+# also needs ffmpeg on PATH). Uncomment if you change a spoken sentence:
+# piper-tts

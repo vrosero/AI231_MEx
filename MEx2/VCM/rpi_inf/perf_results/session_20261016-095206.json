@@ -1,0 +1,157 @@
+{
+ "type": "session",
+ "started": "2026-10-16 09:51:25",
+ "meta": {
+  "dry_run": false,
+  "config": {
+   "mic_prefer": [
+    "respeaker",
+    "seeed",
+    "tlv320aic3x",
+    "pulse",
+    "usb"
+   ],
+   "speaker_prefer": [
+    "pulse"
+   ],
+   "music_audio_device": "pipewire",
+   "wake_engine": "cnn",
+   "wake_rms_threshold": 0.012,
+   "wake_min_active_frames": 3,
+   "wake_cooldown_ms": 2500,
+   "wake_threshold": 0.75,
+   "wake_persist_frames": 2,
+   "leds_enabled": true,
+   "led_num": 3,
+   "led_blink_hz": 2.5,
+   "music_start_volume": 60,
+   "weather_city": "Quezon City",
+   "weather_lat": 14.6357,
+   "weather_lon": 121.0325,
+   "weather_units": "metric",
+   "min_conf": 0.25,
+   "beep": true,
+   "tts_enabled": true,
+   "tts_volume": 1.0,
+   "cmd_max_seconds": 1.6,
+   "cmd_end_silence": 0.4,
+   "cmd_no_speech_timeout": 1.0
+  }
+ },
+ "stages": {
+  "trim": {
+   "n": 3,
+   "mean_ms": 0.4089953242025028,
+   "p50_ms": 0.37366198375821114,
+   "p95_ms": 0.4858613800024614,
+   "max_ms": 0.49832797958515584
+  },
+  "classify": {
+   "n": 3,
+   "mean_ms": 14.164138003252447,
+   "p50_ms": 13.727457990171388,
+   "p95_ms": 15.324423418496735,
+   "max_ms": 15.501864021643996
+  },
+  "action": {
+   "n": 3,
+   "mean_ms": 0.6655851999918619,
+   "p50_ms": 0.3066062927246094,
+   "p95_ms": 1.5157461166381836,
+   "max_ms": 1.650094985961914
+  }
+ },
+ "events": {
+  "wake": 3
+ },
+ "commands": [
+  {
+   "fine": "CREATE_REMINDER_EXERCISE",
+   "conf": 0.5264,
+   "recognized": true,
+   "ok": true,
+   "action": "create_reminder",
+   "action_ms": 0.3,
+   "intent": "CREATE_REMINDER",
+   "intent_conf": 0.6201
+  },
+  {
+   "fine": "OUT_OF_SCOPE",
+   "conf": 0.6536,
+   "recognized": true,
+   "ok": false,
+   "action": "none",
+   "action_ms": 0.0,
+   "intent": "OUT_OF_SCOPE",
+   "intent_conf": 0.5598
+  },
+  {
+   "fine": "TIMER_10s",
+   "conf": 0.4662,
+   "recognized": true,
+   "ok": true,
+   "action": "timer",
+   "action_ms": 1.7,
+   "intent": "TIMER",
+   "intent_conf": 0.3752
+  }
+ ],
+ "outcomes": {
+  "True|True": 2,
+  "True|False": 1
+ },
+ "event_fields": {
+  "wake": [
+   {
+    "engine": "CnnWakeGate",
+    "score": 0.9994
+   },
+   {
+    "engine": "CnnWakeGate",
+    "score": 0.9987
+   },
+   {
+    "engine": "CnnWakeGate",
+    "score": 0.9297
+   }
+  ]
+ },
+ "stage_fields": {
+  "trim": [
+   {
+    "speech_s": 1.44
+   },
+   {
+    "speech_s": 1.23
+   },
+   {
+    "speech_s": 1.62
+   }
+  ],
+  "action": [
+   {
+    "fine": "CREATE_REMINDER_EXERCISE",
+    "action": "create_reminder"
+   },
+   {
+    "fine": "OUT_OF_SCOPE",
+    "action": "none"
+   },
+   {
+    "fine": "TIMER_10s",
+    "action": "timer"
+   }
+  ]
+ },
+ "ended": "2026-10-16 09:52:06",
+ "uptime_s": 41.4,
+ "summary": {
+  "uptime_s": 41.4,
+  "wakes": 3,
+  "commands": 3,
+  "recognized": 3,
+  "ok": 2,
+  "ok_rate": 0.667,
+  "recognised_rate": 1.0
+ }
+}

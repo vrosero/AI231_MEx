@@ -1,0 +1,15 @@
+# .venv_train — CRNN training/eval/ONNX + report figures, PDF and decks.
+# Pinned to the versions that trained ckpt/crnn.pt and built the deliverables.
+# Create with: bash setup_env.sh
+torch==2.13.0
+numpy==2.5.2
+soundfile==0.14.0
+huggingface_hub==1.33.0
+pyarrow==25.0.1
+onnx==1.23.2
+onnxscript==0.7.2
+onnxruntime==1.31.0
+matplotlib==3.11.1
+reportlab==5.0.1
+python-pptx==1.0.2
+pillow==12.3.0

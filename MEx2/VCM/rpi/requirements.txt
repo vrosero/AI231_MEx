@@ -1,0 +1,39 @@
+# VCM Pi runtime dependencies (Raspberry Pi OS 13 / Python 3.11+)
+# Install into a venv (see setup.sh):
+#   python3 -m venv .venv && . .venv/bin/activate && pip install -r requirements.txt
+# System:   sudo apt install -y portaudio19-dev mpv   (sounddevice + music)
+
+numpy>=1.26
+onnxruntime>=1.26
+sounddevice>=0.4.6
+spidev                    # SPI bus for APA102 LEDs on the ReSpeaker HAT
+
+# ReSpeaker 2-Mics HAT - 3 APA102 RGB status LEDs (SPI). Degrades to no-op if
+# absent / not running as root, so the voice pipeline still runs without it.
+apa102>=0.0.3            # Pimoroni driver (used by runtime/leds.py); 0.0.3 is the latest on PyPI
+RPi.GPIO>=0.7.1          # GPIO backend for the Pimoroni apa102 driver (leds.py fallback chain).
+                         # The working Pi venv uses Pimoroni apa102 + RPi.GPIO; tinue's apa102_pi
+                         # driver needs adafruit_bitbangio (Adafruit-Blinka -> lgpio, no py3.13
+                         # wheel) and is therefore NOT installed. apa102-pi itself is installed
+                         # by setup.sh --no-deps so leds.py's first-choice import can succeed
+                         # if bitbangio is ever added; it degrades gracefully when not.
+
+# Wake word "Hello Jarvis": our own jarvis_cnn.onnx
+# (wake_engine: "cnn" in runtime/config.json) and needs only onnxruntime,
+# which is already listed above.
+
+# Spoken ("Jarvis-like") responses for ALARM/TEMPERATURE/REMINDERS/CALL/
+# MESSAGE. v6: these are PRE-RECORDED MP3s shipped in audio/responses/ and
+# played by runtime/tts.py - piper is NOT used at runtime and is NOT needed
+# on the Pi. The MP3s were synthesized offline with piper-tts
+# (en_GB-alan-medium) by rpi_inf/gen_responses.py; re-run that script on any
+# machine with `pip install piper-tts` if you change a "spoken" sentence in
+# actions.py. (The 63 MB voice model in tts/ is only needed for that
+# regeneration, never for running.)
+# piper-tts
+
+# v3 notes:
+#  - NO tapo SDK: the "lights" are the ReSpeaker HAT's own 3 APA102 LEDs.
+#  - NO flask: the v3 runtime has no web dashboard; every simulated task
+#    (alarm/temperature/reminders/call/message) answers with spoken TTS.
+#  - Weather is Open-Meteo (keyless) - no API key in config.json.

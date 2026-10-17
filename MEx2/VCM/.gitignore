@@ -1,0 +1,9 @@
+.DS_Store
+__pycache__/
+*.pyc
+model/cache/*.npy
+.venv_train/
+.venv_ww/
+.venv_inf/
+# generated dataset — regenerate with: python dataset/gold_dataset.py
+dataset/Jarvis/

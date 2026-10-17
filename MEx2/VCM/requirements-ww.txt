@@ -1,0 +1,9 @@
+# .venv_ww — wake-CNN trainer only (model/wakeword/cnn/train_cnn.py).
+# Pinned to the exact stack that produced the deployed rpi/model/jarvis_cnn.onnx
+# (torch 2.8 exporter). Do NOT bump torch here without re-verifying the ONNX.
+# Create with: bash setup_env.sh
+torch==2.8.0
+numpy==2.0.2
+soundfile==0.13.1
+onnx==1.19.1
+onnxruntime==1.19.2

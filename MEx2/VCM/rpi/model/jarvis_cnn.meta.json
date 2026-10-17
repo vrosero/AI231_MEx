@@ -1,0 +1,18 @@
+{
+  "source": "train_cnn.py",
+  "best_epoch": 20,
+  "best_auc": 0.9999851296692839,
+  "n_mels": 40,
+  "t_frames": 98,
+  "sr": 16000,
+  "clip_s": 1.0,
+  "n_fft": 512,
+  "hop": 160,
+  "win": 512,
+  "input": "mel (B,1,40,98) float32 log-mel - 40 mel bins x 98 frames (10 ms hop), 16 kHz",
+  "output": "prob (B,) sigmoid probability",
+  "runtime": "onnxruntime CPUExecutionProvider",
+  "preprocessing": "resample 16k -> logmel(n_fft=512, hop=160, 40 mels, center-padded) -> crop/pad to 98 frames -> transpose to (40,98)",
+  "training": "Trained on positive 1200, positive_real 122, negative 3000, negative_real 694, noise 800. Block-interleaved room split, seed 42, 30 epochs MPS, best val_auc 0.9999851296692839 at epoch 20 (deployed epoch; an earlier version of train_cnn.py wrote 23 here)",
+  "onnx": "opset 13, ir_version 7, single file, exported with the legacy TorchScript exporter (dynamo=False)"
+}

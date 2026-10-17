@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+mpv.sock
+reminders.json
+.DS_Store
+tts/
