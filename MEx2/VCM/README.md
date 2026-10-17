@@ -43,3 +43,6 @@ scp -r VCM/rpi megumi_rpi@megumi-rpi.local:~/vcm
 scp -r VCM/rpi_inf megumi_rpi@megumi-rpi.local:~/vcm
 # on the Pi: cd ~/vcm && bash setup.sh && bash run.sh
 ```
+## License
+
+MIT — see [LICENSE](LICENSE).
