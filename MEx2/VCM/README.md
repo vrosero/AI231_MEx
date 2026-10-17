@@ -37,12 +37,20 @@ python rpi_inf/check_contract.py   # with .venv_inf active: feature + torch<->ON
 
 Deploy (from the parent of `VCM/`):
 
+Deploy to your own Raspberry Pi (run from the parent of `VCM/`; replace
+`pi@raspberrypi.local` with your Pi's user and hostname or IP):
+
 ```bash
-ssh megumi_rpi@megumi-rpi.local 'mkdir -p ~/vcm'
-scp -r VCM/rpi megumi_rpi@megumi-rpi.local:~/vcm
-scp -r VCM/rpi_inf megumi_rpi@megumi-rpi.local:~/vcm
-# on the Pi: cd ~/vcm && bash setup.sh && bash run.sh
+ssh pi@raspberrypi.local 'mkdir -p ~/vcm'
+scp -r VCM/rpi pi@raspberrypi.local:~/vcm
+scp -r VCM/rpi_inf pi@raspberrypi.local:~/vcm
+# on the Pi: cd ~/vcm/rpi && bash setup.sh && bash run.sh
 ```
+
+`setup.sh` handles everything else on the Pi: system packages, the `rpi/.venv`,
+Wi-Fi via `nmcli` (interactive prompt), and sanity checks. Hardware note: the
+LEDs need a ReSpeaker HAT (SPI); everything else runs on any Pi 4/5 with a mic.
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
